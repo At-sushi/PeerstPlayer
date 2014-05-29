@@ -26,7 +26,8 @@ namespace PeerstPlayer.Shortcut.Command
 			pecaPlayer.Mute = true;
 
 			// 終了時のリレー切断
-			if (PlayerSettings.DisconnectRealyOnClose)
+			if (PlayerSettings.DisconnectRealyOnClose &&
+                (!PlayerSettings.DisconnectUnlessRelayed || pecaPlayer.ChannelInfo == null || int.Parse(pecaPlayer.ChannelInfo.Relays) <= 0))
 			{
 				pecaPlayer.DisconnectRelay();
 			}

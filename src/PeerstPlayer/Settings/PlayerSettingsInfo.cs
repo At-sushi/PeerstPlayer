@@ -14,6 +14,11 @@ namespace PeerstPlayer.Settings
 		public bool DisconnectRealyOnClose = true;
 
 		/// <summary>
+		/// 終了時にリレーしていない枝を切断をするか
+		/// </summary>
+        public bool DisconnectUnlessRelayed = true;
+
+		/// <summary>
 		/// ウィンドウ：ウィンドウスナップ有効
 		/// </summary>
 		public bool WindowSnapEnable = true;

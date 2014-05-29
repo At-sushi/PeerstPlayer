@@ -85,6 +85,15 @@ namespace PeerstPlayer.Forms.Player
 			set { info.SaveReturnSizeOnClose = value; }
 		}
 
+        /// <summary>
+        /// 終了時に下流が居ない枝を切断するか
+        /// </summary>
+        public static bool DisconnectUnlessRelayed
+        {
+            get { return info.DisconnectUnlessRelayed; }
+            set { info.DisconnectUnlessRelayed = value; }
+        }
+
 		/// <summary>
 		/// ウィンドウ：ウィンドウスナップ有効
 		/// </summary>

@@ -72,6 +72,7 @@ namespace PeerstPlayer.Forms.Setting
 			{
 				// チェックボックスの表示
 				disconnectRealyOnCloseCheckBox.Checked = PlayerSettings.DisconnectRealyOnClose;
+                DisconnectUnlessRelayedCheckBox.Checked = PlayerSettings.DisconnectUnlessRelayed;
 				returnPositionOnStartCheckBox.Checked = PlayerSettings.ReturnPositionOnStart;
 				returnSizeOnStartCheckBox.Checked = PlayerSettings.ReturnSizeOnStart;
 				windowSnapEnableCheckBox.Checked = PlayerSettings.WindowSnapEnable;
@@ -298,6 +299,7 @@ namespace PeerstPlayer.Forms.Setting
 		{
 			// プレイヤー設定
 			PlayerSettings.DisconnectRealyOnClose = disconnectRealyOnCloseCheckBox.Checked;
+            PlayerSettings.DisconnectUnlessRelayed = DisconnectUnlessRelayedCheckBox.Checked;
 			PlayerSettings.ReturnPositionOnStart = returnPositionOnStartCheckBox.Checked;
 			PlayerSettings.ReturnSizeOnStart = returnSizeOnStartCheckBox.Checked;
 			PlayerSettings.WindowSnapEnable = windowSnapEnableCheckBox.Checked;
@@ -387,5 +389,10 @@ namespace PeerstPlayer.Forms.Setting
 		{
 			Close();
 		}
+
+        private void disconnectRealyOnCloseCheckBox_CheckedChanged(object sender, System.EventArgs e)
+        {
+            DisconnectUnlessRelayedCheckBox.Enabled = disconnectRealyOnCloseCheckBox.Checked;
+        }
 	}
 }
