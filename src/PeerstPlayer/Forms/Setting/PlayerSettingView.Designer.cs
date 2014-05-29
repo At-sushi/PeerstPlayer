@@ -323,6 +323,7 @@ namespace PeerstPlayer.Forms.Setting
             // DisconnectUnlessRelayedCheckBox
             // 
             this.DisconnectUnlessRelayedCheckBox.AutoSize = true;
+            this.DisconnectUnlessRelayedCheckBox.Enabled = false;
             this.DisconnectUnlessRelayedCheckBox.Location = new System.Drawing.Point(21, 42);
             this.DisconnectUnlessRelayedCheckBox.Name = "DisconnectUnlessRelayedCheckBox";
             this.DisconnectUnlessRelayedCheckBox.Size = new System.Drawing.Size(171, 16);
